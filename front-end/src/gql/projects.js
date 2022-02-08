@@ -108,7 +108,7 @@ export default {
         }
     },
 
-    async update(input ,state){
+    async update(input){
 
         try{
             const response = await apolloProvider.defaultClient.mutate({

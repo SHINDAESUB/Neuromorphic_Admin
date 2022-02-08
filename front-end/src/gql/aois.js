@@ -124,7 +124,7 @@ export default {
         })
     },
 
-    async update(input ,aoiUid ){
+    async update(input ){
         try{
             const response = await apolloProvider.defaultClient.mutate({
                 mutation: gql`

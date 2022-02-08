@@ -56,7 +56,9 @@
       />
 
       <keep-alive include="">
-        <router-view/>
+        <transition name="move">
+          <router-view/>        
+        </transition>
       </keep-alive>
     </v-main>
   </v-app>
@@ -188,7 +190,7 @@ export default {
     }),
 
 
-    EventBus.$on('openConfirm',( title, massage , type ,info) => { 
+    EventBus.$on('openConfirm',( title, massage , type ) => { 
       this.confirmOpen = true, 
       this.confirmTitle = title,
       this.confirmMessage = massage,
@@ -265,6 +267,14 @@ export default {
 
 body{
     margin: 0;
+}
+
+.move-enter-active, .move-leave-active{
+  
+}
+
+.move-enter , .move-leave {
+
 }
 
 </style>
